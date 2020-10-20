@@ -29,6 +29,14 @@ section {
   cursor: none;
 }
 
+::selection {
+
+color: #000;
+
+background-color:gold;
+
+}
+
 .cursor {
   width: 5rem;
   height: 5rem;
