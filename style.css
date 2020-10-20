@@ -264,7 +264,7 @@ button.CTA:focus {
 
 @media (max-width: 600px) {
   .copyright {
-    font-size: 3px;
+    font-size: 12px;
     line-height: 1.5;
     letter-spacing: 1px;
     text-align: center;
@@ -278,11 +278,11 @@ button.CTA:focus {
 
   .subtitle {
     font-family: Raleway;
-    font-size: 5px;
+    font-size: 24px;
     line-height: 1.5;
     letter-spacing: 3px;
     text-align: left;
-    padding: 10px;
+    padding: 16px;
   }
 
   .right-subtitle {
@@ -309,7 +309,7 @@ button.CTA:focus {
 
   .slogan {
     padding-top: 30px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -323,7 +323,7 @@ button.CTA:focus {
   }
 
   p {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .cursor {
@@ -331,7 +331,7 @@ button.CTA:focus {
   }
 
   .logo-img {
-    width: 30%;
+    width: 40%;
   }
 
   .nav {
@@ -359,7 +359,7 @@ button.CTA:focus {
   button.CTA {
     margin-top: 10%;
     margin-bottom: 10%;
-    font-size: 0.2em;
+    font-size: 0.9em;
   }
 
   .contact-heading {
