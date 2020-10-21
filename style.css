@@ -423,5 +423,7 @@ button.CTA:focus {
   .contact-heading {
     font-size: 100px;
   }
-
+  .cursor {
+    display: none;
+  }
 }
