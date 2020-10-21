@@ -258,6 +258,14 @@ button.CTA:focus {
   color: gray;
 }
 
+.mobile-heading{
+  font-size: 0px;
+  color: #242428;
+}
+.mobile-slogan{
+  font-size: 0px;
+}
+
 @-webkit-keyframes rotate-center {
   0% {
     -webkit-transform: rotate(0);
@@ -279,9 +287,26 @@ button.CTA:focus {
   }
 
   .heading {
+    display: none;
+  }
+
+  .mobile-heading{
     font-size: 30px;
     color: gold;
     z-index: 10;
+    position: fixed;
+    top: 0;
+  }
+
+  .mobile-slogan{
+    padding-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: 3px;
+    text-align: left;
   }
 
   .subtitle {
@@ -290,7 +315,6 @@ button.CTA:focus {
     line-height: 1.5;
     letter-spacing: 3px;
     text-align: left;
-    padding: 16px;
   }
 
   .right-subtitle {
@@ -307,7 +331,7 @@ button.CTA:focus {
   }
 
   .doodle {
-    width: 80%
+    width: 100%
   }
 
   .line {
@@ -335,6 +359,10 @@ button.CTA:focus {
   }
 
   .cursor {
+    display: none;
+  }
+
+  .running{
     display: none;
   }
 
@@ -378,5 +406,12 @@ button.CTA:focus {
   .heading-space {
     width: 10px;
     height: 70px;
+  }
+  #contact{
+    height: 100vh;
+  }
+
+  .container-fluid {
+    padding: 0;
   }
 }
