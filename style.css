@@ -417,12 +417,6 @@ button.CTA:focus {
 }
 
 @media (max-width: 1200px) {
-  .heading{
-    font-size: 100px;
-  }
-  .contact-heading {
-    font-size: 100px;
-  }
   .cursor {
     display: none;
   }
