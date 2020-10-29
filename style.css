@@ -88,12 +88,12 @@ background-color:gold;
 .nav-link:hover {
   color: #fffef8;
   text-decoration: none;
+  cursor: none;
 
 }
 
 .hovered-link {
   color: #fffef8;
-
 }
 
 .white {
