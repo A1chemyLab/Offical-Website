@@ -29,16 +29,15 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="http://a1chemylab.com" />
-  <meta name="description" content="A1CHEMY LAB - 煉金術事務所 DESIGN FOR ALL | UI/UX設計 | 網頁設計 | 視覺設計 | 台南">
+  <meta name="description" content="A1CHEMY LAB - 煉金術事務所 DESIGN FOR ALL | UI/UX設計 | 網頁設計 | 平面設計 | 台南">
 
   <meta property="og:locale" content="zh_TW" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="A1chemy Lab - 當代的煉金術 | WEBSITE + DESIGN = MEGIC+++ | 設計本位的數位策略">
-  <meta property="og:description" content="A1CHEMY LAB - 煉金術事務所 DESIGN FOR ALL | UI/UX設計 | 網頁設計 | 視覺設計 | 台南">
+  <meta property="og:description" content="A1CHEMY LAB - 煉金術事務所 DESIGN FOR ALL | UI/UX設計 | 網頁設計 | 平面設計 | 台南">
   <meta property="og:url" content="https://a1chemylab.com/" />
   <meta property="og:site_name" content="煉金術事務所" />
   <meta property="og:image" content="https://mir-s3-cdn-cf.behance.net/project_modules/fs/7d999c97308067.5ec263e3cc4a1.jpg" />
-
 </head>
 
 <body>
@@ -139,11 +138,11 @@
   </section>
   <section class="white" id="contact">
     <div class="container-fluid">
-      <!-- The cursor elements -->
-      <div class="cursor cursor--small"></div>
+
       <!-- Title -->
       <div class="row align-items-center ">
-
+        <!-- The cursor elements -->
+        <div class="cursor cursor--small" id="mouse-circle"></div>
         <div class="col-lg-6">
           <h1 class="contact-heading" data-aos="fade-up" data-aos-duration="3000">A1CHEMY<br />LAB</h1>
           <p class="subtitle" data-aos="fade-down" data-aos-duration="3000">一起喝杯抹茶拿鐵，<br>
@@ -176,24 +175,51 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-    let mouseCursor = document.querySelector(".cursor");
+    document.addEventListener('DOMContentLoaded', () => {
+    let mousePosX = 0,
+        mousePosY = 0,
+        mouseCircle = document.getElementById('mouse-circle');
+    // let mouseCursor = document.querySelector(".cursor");
     let navLinks = document.querySelectorAll('.nav-links li');
-    window.addEventListener("mousemove", cursor)
-
-    function cursor(e) {
-      mouseCursor.style.top = e.pageY + "px";
-      mouseCursor.style.left = e.pageX + "px";
-    }
+    // window.addEventListener("mousemove", cursor)
+    //
+    // function cursor(e) {
+    //   mouseCursor.style.top = e.pageY + "px";
+    //   mouseCursor.style.left = e.pageX + "px";
+    // }
     navLinks.forEach(link => {
       link.addEventListener('mouseleave', () => {
-        mouseCursor.classList.remove('link-grow');
+        mouseCircle.classList.remove('link-grow');
         link.classList.remove('hovered-link');
       });
       link.addEventListener('mouseover', () => {
-        mouseCursor.classList.add('link-grow');
+        mouseCircle.classList.add('link-grow');
         link.classList.add('hovered-link');
       });
     });
+
+
+
+    document.onmousemove = (e) => {
+        mousePosX = e.pageX;
+        mousePosY = e.pageY;
+    }
+
+    let delay = 6,
+        revisedMousePosX = 0,
+        revisedMousePosY = 0;
+
+    function delayMouseFollow() {
+        requestAnimationFrame(delayMouseFollow);
+
+        revisedMousePosX += (mousePosX - revisedMousePosX) / delay;
+        revisedMousePosY += (mousePosY - revisedMousePosY) / delay;
+
+        mouseCircle.style.top = revisedMousePosY + 'px';
+        mouseCircle.style.left = revisedMousePosX + 'px';
+    }
+    delayMouseFollow();
+});
     document.documentElement.style.setProperty('--animate-duration', '2s');
   </script>
 </body>
