@@ -285,12 +285,18 @@ button.CTA:focus {
 @media (max-width: 1200px) {
   .heading{
     font-size: 100px;
+    letter-spacing: 10px;
   }
   .contact-heading {
     font-size: 100px;
   }
   .cursor {
     display: none;
+  }
+  .nav-link:focus {
+    color: gold;
+    text-decoration: none;
+    cursor: none;
   }
 
 }
@@ -428,5 +434,10 @@ button.CTA:focus {
 
   .container-fluid {
     padding: 0;
+  }
+  .nav-link:focus {
+    color: gold;
+    text-decoration: none;
+    cursor: none;
   }
 }
