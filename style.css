@@ -293,6 +293,11 @@ button.CTA:focus {
   .cursor {
     display: none;
   }
+  .nav-link:hover {
+    color: gold;
+    text-decoration: none;
+    cursor: none;
+  }
   .nav-link:focus {
     color: gold;
     text-decoration: none;
@@ -434,6 +439,11 @@ button.CTA:focus {
 
   .container-fluid {
     padding: 0;
+  }
+  .nav-link:hover {
+    color: gold;
+    text-decoration: none;
+    cursor: none;
   }
   .nav-link:focus {
     color: gold;
